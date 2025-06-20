@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ "$1" == "bootstrap" ]
+    then
+        ./scripts/bootstrap.sh
+    exit
+fi
+
+if [ "$1" == "run" ]
+    then
+        ./scripts/run.sh "${@:2}"
+    exit
+fi
+
+if [ "$1" == "test" ]
+    then
+        ./cli run ./vendor/bin/phpunit "${@:2}"
+    exit
+fi
+
+if [ "$1" == "testf" ]
+    then
+        ./cli test --filter="${@:2}"
+    exit
+fi
+
+./cli run $@
