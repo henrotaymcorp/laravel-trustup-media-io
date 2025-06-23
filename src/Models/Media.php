@@ -73,7 +73,7 @@ class Media implements MediaContract
         return Str::of($url)
             ->after('://')
             ->after('/')
-            ->prepend('http://'.config('config.media_url').'/');
+            ->prepend('http://'.config('laravel-trustup-media-io.media_url').'/');
     }
 
     /** @return static */
