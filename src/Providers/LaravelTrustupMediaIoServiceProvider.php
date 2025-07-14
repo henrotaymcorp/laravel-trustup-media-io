@@ -37,6 +37,10 @@ class LaravelTrustupMediaIoServiceProvider extends VersionablePackageServiceProv
         $this->app->bind(StoreMediaResponseContract::class, StoreMediaResponse::class);
         $this->app->bind(MediaTransformerContract::class, MediaTransformer::class);
         $this->app->bind(DestroyMediaResponseContract::class, DestroyMediaResponse::class);
+
+        $this->mergeConfigFrom(
+        __DIR__ . '/../config/laravel-trustup-media-io.php', 'laravel-trustup-media-io'
+    );
     }
 
     protected function registerMediaEndpoint(): self
@@ -51,5 +55,9 @@ class LaravelTrustupMediaIoServiceProvider extends VersionablePackageServiceProv
     protected function addToBoot(): void
     {
         Relation::requireMorphMap();
+
+        $this->publishes([
+        __DIR__ . '/../config/laravel-trustup-media-io.php' => config_path('laravel-trustup-media-io.php'),
+        ], 'laravel-trustup-media-io-config');
     }
 }

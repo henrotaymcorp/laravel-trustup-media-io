@@ -19,6 +19,8 @@ interface MediaContract extends HasDimensionsContract, Arrayable, ExternalModelC
     public function setId(int $id): MediaContract;
 
     public function getUrl(): string;
+
+    public function getContextualUrl(bool $inDockerContext): string;
     
     /** @return static */
     public function setUrl(string $url): MediaContract;

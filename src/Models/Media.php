@@ -7,6 +7,7 @@ use Henrotaym\LaravelTrustupMediaIo\Contracts\Models\MediaContract;
 use Henrotaym\LaravelTrustupMediaIoCommon\Models\Traits\HasDimensions;
 use Henrotaym\LaravelTrustupMediaIoCommon\Contracts\Models\ConversionContract;
 use Henrotaym\LaravelTrustupMediaIo\Contracts\Transformers\Models\MediaTransformerContract;
+use Illuminate\Support\Str;
 
 class Media implements MediaContract
 {
@@ -53,6 +54,26 @@ class Media implements MediaContract
     public function getUrl(): string
     {
         return $this->url;
+    }
+
+    /**
+     * If content is retrieved in docker backend context, set flag to true. Otherwise, it will reflect basic media public url.
+     *
+     * This method gives maximum control to developer. If docker mode is not activated, flag is ignored.
+     */
+    public function getContextualUrl(bool $inDockerContext): string
+    {
+        $url = $this->getUrl();
+
+        if (! config('trustup-io-authentification.docker.activated') || ! $inDockerContext) {
+            return $url;
+        }
+
+      
+        return Str::of($url)
+            ->after('://')
+            ->after('/')
+            ->prepend('http://'.config('laravel-trustup-media-io.media_url').'/');
     }
 
     /** @return static */
