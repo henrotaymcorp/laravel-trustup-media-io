@@ -7,3 +7,11 @@ services:
     image: "laravel-trustup-media-io-php-local"
     volumes:
       - ./:/opt/apps/app
+  bun:
+    build:
+      context: .
+      target: bun
+      dockerfile: Dockerfile
+    image: "laravel-trustup-media-io-bun-local"
+    volumes:
+      - ./:/opt/apps/app

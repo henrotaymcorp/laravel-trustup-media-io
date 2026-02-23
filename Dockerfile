@@ -11,3 +11,9 @@ RUN composer install --no-scripts --no-autoloader --prefer-dist
 COPY . .
 
 RUN composer install --prefer-dist
+
+FROM oven/bun:1.3 AS bun
+
+WORKDIR /opt/apps/app
+
+COPY . .
