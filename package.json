@@ -1,21 +1,14 @@
 {
-    "name": "laravel-trustup-media-io",
+    "name": "@henrotaym/laravel-trustup-media-io",
     "version": "1.4.0",
-    "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
-    "repository": "git@github.com:henrotaym/laravel-trustup-media-io.git",
     "main": "index.js",
-    "devDependencies": {
-        "@changesets/cli": "^2.29.7",
-        "lefthook": "^2.0.3"
-    },
+    "repository": "git@github.com:henrotaym/laravel-trustup-media-io.git",
+    "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
     "license": "MIT",
-    "private": true,
+    "devDependencies": {
+        "@evilmartians/lefthook": "^1.11.13"
+    },
     "scripts": {
-        "postversion": "npm run push",
-        "commit": "gitmoji -c && npm run push",
-        "push": "git push && git push --tags",
-        "commit:all": "git add . && npm run commit",
-        "alpha": "npm version --preid=alpha",
-        "version:alpha": "npm version prerelease --preid=alpha"
+        "postversion": "git push && git push --tags"
     }
 }
