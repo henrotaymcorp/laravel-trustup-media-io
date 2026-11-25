@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9be51b0d9bb7f6757e1ea16f6adf9f6b",
+    "content-hash": "32812b72408a63c040977a54d9870643",
     "packages": [
         {
             "name": "deegitalbe/laravel-trustup-io-external-model-relations",
@@ -697,16 +697,16 @@
         },
         {
             "name": "henrotaym/laravel-trustup-media-io-common",
-            "version": "v2.0.0",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/henrotaym/laravel-trustup-media-io-common.git",
-                "reference": "6e8932ba64142f9721ec348e9e6b185e06719e3b"
+                "url": "https://github.com/henrotaymcorp/laravel-trustup-media-io-common.git",
+                "reference": "5cf05790fe443075671d974d000f61ce3a5783f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/henrotaym/laravel-trustup-media-io-common/zipball/6e8932ba64142f9721ec348e9e6b185e06719e3b",
-                "reference": "6e8932ba64142f9721ec348e9e6b185e06719e3b",
+                "url": "https://api.github.com/repos/henrotaymcorp/laravel-trustup-media-io-common/zipball/5cf05790fe443075671d974d000f61ce3a5783f9",
+                "reference": "5cf05790fe443075671d974d000f61ce3a5783f9",
                 "shasum": ""
             },
             "require": {
@@ -743,10 +743,10 @@
             ],
             "description": "Used by trustup applications to store and retrieve media",
             "support": {
-                "issues": "https://github.com/henrotaym/laravel-trustup-media-io-common/issues",
-                "source": "https://github.com/henrotaym/laravel-trustup-media-io-common/tree/v2.0.0"
+                "issues": "https://github.com/henrotaymcorp/laravel-trustup-media-io-common/issues",
+                "source": "https://github.com/henrotaymcorp/laravel-trustup-media-io-common/tree/v2.0.2"
             },
-            "time": "2026-02-23T15:44:25+00:00"
+            "time": "2026-11-25T10:09:12+00:00"
         },
         {
             "name": "psr/http-client",
