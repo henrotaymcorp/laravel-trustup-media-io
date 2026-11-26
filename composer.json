@@ -13,7 +13,7 @@
         "henrotaym/laravel-package-versioning-config": "^2.0",
         "henrotaym/laravel-api-client": "^2.0",
         "deegitalbe/server-authorization": "^2.0",
-        "henrotaym/laravel-trustup-media-io-common": "^2.0",
+        "henrotaym/laravel-trustup-media-io-common": "^2.0.2",
         "deegitalbe/laravel-trustup-io-external-model-relations": "^2.0"
     },
     "require-dev": {
