@@ -1,5 +1,11 @@
 # laravel-trustup-media-io
 
+## 2.1.1
+
+### Patch Changes
+
+- 10b97ce: Require laravel-trustup-media-io-common ^2.0.2, which fixes base64 detection crashing on raw content containing ';base64,'.
+
 ## 2.1.0
 
 ### Minor Changes
